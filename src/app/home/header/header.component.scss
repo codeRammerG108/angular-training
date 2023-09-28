@@ -1,0 +1,69 @@
+/* Header Container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* Header background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  /* Company Name */
+  .company-name {
+    font-size: 24px;
+    h1 {
+        margin-bottom: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+    p{
+        margin-top: 0;
+        font-size: 0.7em;
+        font-family: 'Poppins', sans-serif;
+    }
+  }
+  
+  /* Menu */
+  .menu ul {
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin: 20px 0 0 0;
+    margin-right: 20px; /* Adjust margin as needed */
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #ff6600; /* Hover color */
+  }
+  
+  /* Cart Icon */
+  .cart {
+    
+    position: relative;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6600; /* Background color of the count */
+    color: #fff; /* Text color of the count */
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
