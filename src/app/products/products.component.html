@@ -2,7 +2,7 @@
     <h1>Products</h1>
     <p>Buy yourself a happiness!</p>
 </div>
-<div class="item-container ">
-    <app-product class="item"></app-product>
+<div class="item-container " *ngFor="let product of products">
+    <app-product class="item" productId="{{product.id}}" productImage="{{product.thumbnail}}"  productName="{{product.title}}" productPrice="{{product.price}}" productDescription="{{product.description}}" productStock="{{product.stock}}"></app-product>
 
 </div>

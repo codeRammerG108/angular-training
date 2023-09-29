@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-products',
@@ -15,11 +15,14 @@ export class ProductsComponent {
   // productDescription: string = "Product_Name is gerat product to consider";
   // productQuantity: Number = 0;
   // buttonText: string = "Add to Cart"
+  products: any = [];
 
-  // constructor(private http: HttpClient) {
-  //     this.http.get("https://dummyjson.com/products").subscribe((products: any) => {
-  //         console.log(products);
-  //     })
-  // }
+  constructor(private productService: ProductsService) { 
+ 
+    this.productService.getProducts().subscribe((data) => {
+      this.products = data.products;
+      console.log("From Products Componenet" , this.products);
+    })
+   }
 
 }

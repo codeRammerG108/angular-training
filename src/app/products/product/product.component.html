@@ -1,17 +1,19 @@
-<div class="product-card" *ngFor = "let product of products">
-    {{product}}
+
+
+<div class="product-card">
     <img class="product-image" src="{{productImage}}" alt="Product Image">
     <div class="product-name">{{productName}}</div>
-    <div class="product-price">₹{{product.price}}</div>
+    <div class="product-price">₹{{productPrice}}</div>
     <div class="product-description">
         {{productDescription}}
     </div>
     <div class="add-to-cart">
         <div class="quantity">
-            <button>-</button>
-            <span>{{productQuantity}}</span>
-            <button>+</button>
+            <button (click)="minus()">-</button>
+            <span>{{productQuan}}</span>
+            <button (click)="plus()">+</button>
         </div>
-        <button>{{buttonText}}</button>
+        <button (click)="addToCart()">{{buttonText}}</button>
     </div>
 </div>
+

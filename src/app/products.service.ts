@@ -6,12 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-  products: any;
+  products:any = [];
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<any> {
-    this.products = this.http.get('https://dummyjson.com/docs/products');
-    console.log("passed", this.products);
-    return this.products;
+    // this.http.get("https://dummyjson.com/products").subscribe(resp => {
+    //   this.products = resp;
+    // });
+    return this.http.get<any[]>('https://dummyjson.com/products');
+    // return this.http.get('https://dummyjson.com/products');
   }
 }
