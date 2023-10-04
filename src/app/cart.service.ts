@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,9 @@ import { Observable, BehaviorSubject } from 'rxjs';
 export class CartService {
   private cartNumberSubject = new BehaviorSubject<number>(0);
   cartNumber$ = this.cartNumberSubject.asObservable();
+
+  temp: boolean = false; //will allow to run addtocart() function only if it allwoed from product.component.ts file
+  cartPresent: any[] = []; //Storing cart products here
 
   constructor() { 
   }
